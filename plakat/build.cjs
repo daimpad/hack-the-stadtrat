@@ -11,7 +11,7 @@ const path = require('path');
 
 const dir = __dirname;
 const pageFile = path.join(dir, '..', '002-neon-rain.html');
-const URL_PAGE = 'https://daimpad.github.io/hack-the-stadtrat/';
+const URL_PAGE = 'https://code.paderta.com/hack-den-stadtrat/';
 const source = fs.readFileSync(pageFile, 'utf8');
 
 // Glyphen direkt aus der Seite übernehmen (eine Quelle für Schilder und Plakat)
@@ -80,7 +80,7 @@ function posterHtml(qrSvg) {
   html,body{margin:0;padding:0;background:var(--ink)}
   .sheet{position:relative;width:calc(297mm + 2*var(--bleed));height:calc(420mm + 2*var(--bleed));overflow:hidden;
     background:var(--ink) url("artwork.jpg") center/cover no-repeat;color:#fff;
-    font-family:"Bahnschrift SemiCondensed","Arial Narrow","Roboto Condensed","DejaVu Sans Condensed","DejaVu Sans",Arial,sans-serif}
+    font-family:"Bahnschrift SemiCondensed","Avenir Next Condensed","Roboto Condensed","sans-serif-condensed","Arial Narrow","Liberation Sans Narrow","DejaVu Sans Condensed","DejaVu Sans",Arial,sans-serif}
   .sheet::before{content:"";position:absolute;inset:0;background:
     linear-gradient(180deg,rgba(5,1,15,.55) 0%,rgba(5,1,15,0) 30%,rgba(5,1,15,0) 62%,rgba(5,1,15,.7) 78%,rgba(5,1,15,.92) 100%)}
   .safe{position:absolute;left:var(--bleed);top:var(--bleed);width:297mm;height:420mm}
@@ -124,10 +124,10 @@ function posterHtml(qrSvg) {
       <div class="qr">
         <div class="code">${qrSvg}</div>
         <p class="l1">Ablauf &amp; Challenges</p>
-        <p class="l2">daimpad.github.io/hack-the-stadtrat</p>
+        <p class="l2">code.paderta.com/hack-den-stadtrat</p>
       </div>
     </section>
-    <p class="fine">Veranstalter: machdenstaat.de · Gefördert durch das Land Nordrhein-Westfalen im Programm „2.000 x 1.000 Euro für das Engagement“ · Die Straßenszene ist eine fiktive Darstellung Bonns.</p>
+    <p class="fine">Veranstalter: machdenstaat.de · Gefördert durch das Land Nordrhein-Westfalen im Programm „2.000 x 1.000 Euro für das Engagement“</p>
   </div>
 </div>
 </body>

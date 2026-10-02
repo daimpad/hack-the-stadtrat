@@ -1,0 +1,32 @@
+Abschnitt	Element_v1	Element_v2	Art	Begründung
+Gesamt	Fiktive Szene als eigenständige Seite	Veranstaltungsseite mit Szene als Hero und Infoabschnitten darunter	ergänzt	Entscheidung Damian; Seite bewirbt den Mitmach-Tag am 17.10.2026
+Gesamt	Prompt und Seite auf Englisch	Prompt und Seite auf Deutsch, lang="de"	ersetzt	Entscheidung Damian; Abweichung von Requirement 2 im Prompt dokumentiert; Shared Requirements bleiben wörtlich auf Englisch, da sammlungsweit gültig
+PROMPT	—	Block INHALTE mit wörtlich übernommenem Veranstaltungstext	ergänzt	Requirement 9 (Faktentreue); Abgleich gegen Quelldatei per Skript durchgeführt
+PROMPT	—	Klarstellung: Hyperlinks sind keine geladenen Ressourcen; keine eingebettete Karte, kein externes Logo	ergänzt	Vereinbarkeit mit Requirement 1
+PROMPT	Keine realen Markennamen oder Logos	Regel auf die Kulisse beschränkt; reale Namen nur als Veranstaltungsangaben	angepasst	bitcircus101, machdenstaat.de und Förderprogramm müssen genannt werden
+PROMPT	Nachtmarkt Rheinufer, nasse Rheinpromenade	Regennasse Altstadtstraße mit Kopfsteinpflaster	ersetzt	Veranstaltungsort Dorotheenstraße 101 liegt in der Altstadt nahe der Heerstraße (Kirschblütenviertel)
+PROMPT	Kirschblüten als ästhetische Brücke	Kirschblüten als Ortsbezug zum Veranstaltungsviertel	angepasst	Von Damian bestätigt; nun auch räumlich begründet
+PROMPT	Marktstände unter gestreiften Markisen	Ein Imbissstand mit Dampf	reduziert	Nachtmarkt ist nicht Teil der Veranstaltung; vermeidet falschen Eindruck
+PROMPT	—	Stabiler Neonschriftzug „bitcircus101“ in schlichter Grotesk, ohne Logo, vom Ausfall ausgenommen	ergänzt	Veranstaltungsort in der Szene markieren; Lesbarkeit
+PROMPT	Neonwörter: BÜDCHEN, TRINKHALLE, RHEINBLICK, NACHTMARKT, REPARATUR	RATSDATEN, OPARL, OFFENE DATEN, MITMACHEN, STADTRAT, KI, SA 17.10. sowie BÜDCHEN, TRINKHALLE	ersetzt	Entscheidung Damian: Neonschilder greifen das Thema auf
+PROMPT	Titel im Canvas/CSS: NEON RAIN — Nachtmarkt Rheinufer, Bonn	HTML-Überschrift „Hack den Stadtrat“ mit Datum, Ort, Hinweis und zwei Aktionen	ersetzt	Veranstaltungstitel; echtes HTML für Barrierefreiheit und Auffindbarkeit
+PROMPT	Ticker mit fiktivem Bonner Newswire	Ticker nur mit Veranstaltungsangaben und einer historischen Zeile	ersetzt	Entscheidung Damian; strikte Trennung von Fiktion und Fakt neben realen Angaben
+PROMPT	Tickerzeile zum HAUPTSTADT-Schild (unbestimmt)	BONN WAR 1949–1990 HAUPTSTADT · JEDE WOCHE ENTSCHEIDET DER BONNER RAT …	konkretisiert	Historisch zutreffend; zweiter Satz aus dem Veranstaltungstext
+PROMPT/INTERACTION	HUD: driftende Temperatur	entfernt	entfernt	Fiktiver Wert könnte neben realen Angaben als Wetterinformation missverstanden werden
+PROMPT/INTERACTION	HUD: fiktiver RHEINPEGEL	entfernt	entfernt	Szene liegt nicht mehr am Rhein; keine fiktiven Messwerte neben realen Angaben
+PROMPT/INTERACTION	—	HUD-Countdown bis 17.10.2026, 11:00 Uhr, fest auf Europe/Berlin (+02:00)	ergänzt	Veranstaltungsbezug; 17.10.2026 liegt vor dem Ende der Sommerzeit am 25.10.2026
+PROMPT	—	Abschnitte: Einleitung, Auf einen Blick, Ablauf, Challenges, Datengrundlage, Über machdenstaat.de, Förderung	ergänzt	Entscheidung Damian: Infos als Abschnitte unter dem Hero
+PROMPT	—	Fußzeile: Hinweis, dass die Straßenszene fiktiv ist	ergänzt	Requirement 9: Fiktives klar kennzeichnen
+PROMPT	—	Inline-JSON-LD schema.org/Event	ergänzt	Auffindbarkeit der Veranstaltung; kein externer Aufruf
+PROMPT	—	<title> und Meta-Description aus Veranstaltungsangaben	ergänzt	Requirement 2
+TECHNIQUES	CSS-Overlay über gesamte Seite	Glitch- und Aberrationseffekte nur im Hero-Titel; Fließtext ohne Effekte, WCAG AA	angepasst	Lesbarkeit der Veranstaltungsinformationen
+TECHNIQUES	—	IntersectionObserver pausiert Rendering und Regenton außerhalb des Hero	ergänzt	Leistung und Ruhe beim Lesen der Abschnitte
+INTERACTION	Pointer steuert Kamera	zusätzlich touch-action: pan-y	angepasst	Seite scrollt nun; Touch-Scrollen darf nicht blockiert werden
+INTERACTION	Pfeiltasten und Leertaste global	nur bei fokussierter Szene	angepasst	Pfeiltasten und Leertaste scrollen sonst die Seite
+INTERACTION	Tasten L, M; Schaltflächen STRIKE, SOUND, RAIN	Tasten B, T; Schaltflächen BLITZ, TON, REGEN	ersetzt	Deutsche Oberfläche; Tasten folgen den Beschriftungen
+INTERACTION	Klick überall löst Blitz aus	Klicks auf Links und Schaltflächen lösen keinen Blitz aus	angepasst	Hero enthält nun Aktionen
+INTERACTION	—	Hero-Aktionen: Anker zu Ablauf, mailto an goern@machdenstaat.de	ergänzt	Aus Veranstaltungstext abgeleitet
+INHALTE	Quelle: Feld „Wann: – Einstieg auch ·“	nicht übernommen	ausgelassen	Unvollständiges Feld; Angaben aus „Auf einen Blick“ verwendet
+INHALTE	Quelle: doppelter Link zum Förderprogramm	einmal übernommen	ausgelassen	Dublette
+INHALTE	Postleitzahl 53113	53113 (wie Quelle)	zu prüfen	Parkopedia führt Dorotheenstraße 101 unter 53111; vor Veröffentlichung bestätigen
+SHARED REQUIREMENTS	Punkte 1–10	wörtlich unverändert	unverändert	Gelten für die gesamte Sammlung; seitenspezifische Abweichung separat dokumentiert

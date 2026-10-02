@@ -1,0 +1,26 @@
+Abschnitt	Element_Original	Element_Neu	Art	Begründung
+TITLE	Neon Rain	Neon Rain — Bonn	angepasst	Ortsbezug im Titel; Dateiname unverändert, um Nummerierung der Sammlung (002) zu erhalten
+PROMPT	NEON RAIN — District 9 Night Market	NEON RAIN — Nachtmarkt Rheinufer, Bonn	ersetzt	Fiktiver Bezirk durch Bonner Ortsbezug ersetzt; Fiktionalität bleibt markiert
+PROMPT	Generische Skyline in vier Ebenen	Siebengebirge/Drachenfels; Bundesviertel mit Post Tower, Langer Eugen, Kennedybrücke; Münster; Altstadthäuser	ersetzt	Wiedererkennbare Bonner Silhouetten; Parallax-Technik unverändert
+PROMPT	—	Hinweis: Geografie für Komposition stilisiert	ergänzt	Genauigkeitsanforderung (Shared Req. 9): keine Behauptung exakter Sichtachsen
+PROMPT	Katakana-artige Glyphen	Deutsche Wörter in Neon-Grotesk, Umlautpunkte als eigene Röhrensegmente	ersetzt	Entscheidung Damian; Umlaute als ortsspezifisches Detail
+PROMPT/DESCRIPTION	HOTEL-Schild mit dunklem L	HAUPTSTADT-Schild mit dunklem HAUPT	ersetzt	Verweis auf Bonns Rolle als Hauptstadt der BRD 1949–1990; Ticker greift dies auf
+PROMPT/TECHNIQUES	Holografischer Koi über Tower 61	Wireframe-Büste Beethovens über dem Post Tower	ersetzt	Entscheidung Damian; Hologrammtechnik (Ghost, Scanlines, Glitches, Lichtkegel) beibehalten
+PROMPT/TECHNIQUES	—	Neonbeleuchtete Kirschbäume, Blütenblätter im Regen (bis 150 Partikel)	ergänzt	Brücke zur ostasiatisch geprägten Ausgangsästhetik; Kirschblüten der Bonner Altstadt
+PROMPT/TECHNIQUES	Nasse Straße, Asphalt mit Fahrbahnmarkierung	Nasse Rheinpromenade, Kopfsteinpflaster, Granitbordstein	ersetzt	Ortstypischer Belag; Reflexionstechnik unverändert
+PROMPT/INTERACTION	HUD: Zeit, Temperatur, SIGNAL	zusätzlich fiktiver RHEINPEGEL-Wert	ergänzt	Ortsbezug; als fiktiv gekennzeichnet
+PROMPT/INTERACTION	Drizzle / Downpour / Monsoon	NIESEL / LANDREGEN / WOLKENBRUCH mit englischen aria-labels	ersetzt	Monsun ist kein rheinisches Phänomen; Barrierefreiheit über aria-labels gewahrt
+PROMPT	Fiktive News	Fiktiver Bonner Newswire	angepasst	Ortsbezug; Fiktionalität bleibt markiert
+PROMPT	—	Keine realen Markennamen oder Logos	ergänzt	Post Tower ist Unternehmenssitz; Darstellung nur als Architektursilhouette
+PROMPT/INTERACTION	Blitz erhellt Skyline	Blitz erhellt Skyline bis zum Siebengebirge	angepasst	Tiefenwirkung der hintersten Ebene
+DESCRIPTION	Marktstände mit Dampf	Dampf von Reibekuchen- und Currywurstständen	angepasst	Rheinische Imbisskultur
+DESCRIPTION	Fußgänger mit leuchtenden Schirmen	zusätzlich Radfahrende mit beleuchteten Rädern	ergänzt	Ortstypisches Verkehrsbild
+DESCRIPTION	Nutzerentwurf: "small city of germany (Bonn)", Tippfehler "withe the"	Fiktives Near-Future-Bonn; Tippfehler bereinigt	korrigiert	Sprachliche Konsistenz
+TECHNIQUES	Hochhaus-Setbacks, Wassertanks, Kuppeldächer	Gründerzeitgiebel, Mansarddächer, Gauben, Erker; parametrische Silhouetten Post Tower und Langer Eugen	ersetzt	Bonner Bautypologie
+TECHNIQUES	120 Hz Neon-Buzz	100 Hz Neon-Buzz	korrigiert	Doppelte Netzfrequenz: 50 Hz in Europa statt 60 Hz in Nordamerika/Teilen Asiens
+TECHNIQUES	Dead-glyph sputter	zusätzlich unabhängiger Ausfall von Umlautpunkten	ergänzt	Folgt aus deutschem Glyphensatz
+TECHNIQUES	—	Hologramm zerfällt kurz bei Blitzeinschlag	ergänzt	Kopplung von Blitz und Hologramm
+INTERACTION	—	Gelegentliches, glitchiges Kopfmotiv der 5. Sinfonie nach Blitzeinschlag	ergänzt	Beethoven-Bezug; Werk gemeinfrei; per Web Audio synthetisiert
+INTERACTION	Reduced motion: Regen, Neon, Hologramm, Ticker	zusätzlich weniger und langsamere Blütenblätter	ergänzt	Konsistenz mit neuem Partikelsystem
+SHARED REQUIREMENTS	Punkte 1–10	unverändert	unverändert	Gilt für alle 100 Seiten der Sammlung; lang="en" bleibt passend, da Prompt auf Englisch
+PALETTE	#05010f, #1a0433, #ff2a6d, #05d9e8, #f9f002	unverändert	unverändert	Cyberpunk-Charakter bleibt erhalten

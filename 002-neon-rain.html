@@ -7,13 +7,13 @@
 <meta name="description" content="Mitmach-Tag zu offenen Ratsdaten und KI: Samstag, 17. Oktober 2026, ab 11 Uhr im bitcircus101, Bonn. Kostenlos, ohne Anmeldung, kein Programmierwissen nötig.">
 <meta name="theme-color" content="#05010f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2305010f'/%3E%3Cpath d='M14 27 18 7 29 19M50 27 46 7 35 19' fill='none' stroke='%23ff2a6d' stroke-width='4' stroke-linejoin='round'/%3E%3Cellipse cx='32' cy='37' rx='21' ry='18' fill='%231a0640' stroke='%2305d9e8' stroke-width='4'/%3E%3Cellipse cx='24.5' cy='35' rx='4' ry='3' fill='%23d7ff50'/%3E%3Cellipse cx='39.5' cy='35' rx='4' ry='3' fill='%23d7ff50'/%3E%3Cpath d='M28.5 42h7l-3.5 3.5z' fill='%23ff7ab8'/%3E%3C/svg%3E">
-<link rel="canonical" href="https://daimpad.github.io/hack-the-stadtrat/002-neon-rain.html">
+<link rel="canonical" href="https://code.paderta.com/hack-den-stadtrat/002-neon-rain.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Hack den Stadtrat – Mitmach-Tag am 17. Oktober 2026">
 <meta property="og:description" content="Mitmach-Tag zu offenen Ratsdaten und KI: Samstag, 17. Oktober 2026, ab 11 Uhr im bitcircus101, Bonn. Kostenlos, ohne Anmeldung, kein Programmierwissen nötig.">
-<meta property="og:url" content="https://daimpad.github.io/hack-the-stadtrat/002-neon-rain.html">
-<meta property="og:image" content="https://daimpad.github.io/hack-the-stadtrat/og-image.jpg">
+<meta property="og:url" content="https://code.paderta.com/hack-den-stadtrat/">
+<meta property="og:image" content="https://code.paderta.com/hack-den-stadtrat/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Fiktive, neonbeleuchtete Straßenszene eines nächtlichen Bonn im Regen mit dem Titel Hack den Stadtrat">
@@ -29,8 +29,8 @@
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "inLanguage": "de",
-  "url": "https://daimpad.github.io/hack-the-stadtrat/002-neon-rain.html",
-  "image": ["https://daimpad.github.io/hack-the-stadtrat/og-image.jpg"],
+  "url": "https://code.paderta.com/hack-den-stadtrat/",
+  "image": ["https://code.paderta.com/hack-den-stadtrat/og-image.jpg"],
   "isAccessibleForFree": true,
   "location": {
     "@type": "Place",
@@ -56,7 +56,7 @@
   --ink:#05010f; --ink2:#0b0320; --violet:#1a0433; --violet2:#2a0a4f;
   --mag:#ff2a6d; --cyan:#05d9e8; --acid:#f9f002;
   --text:#ece8f6; --muted:#c3bbd9; --line:rgba(5,217,232,.22);
-  --f-cond:"Bahnschrift SemiCondensed","Bahnschrift","Arial Narrow","Roboto Condensed","Helvetica Neue",Arial,sans-serif;
+  --f-cond:"Bahnschrift SemiCondensed","Bahnschrift","Avenir Next Condensed","Roboto Condensed","sans-serif-condensed","Arial Narrow","Liberation Sans Narrow","Nimbus Sans Narrow","DejaVu Sans Condensed","Helvetica Neue",Arial,sans-serif;
   --f-body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --f-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","DejaVu Sans Mono",monospace;
   --gut:clamp(16px,4vw,56px);
@@ -199,7 +199,28 @@ tbody tr.kick th{box-shadow:inset 3px 0 0 var(--mag);padding-left:.7rem}
 footer{background:#030009;border-top:1px solid rgba(255,42,109,.35);padding:28px var(--gut) 36px;font:500 .78rem/1.6 var(--f-mono);letter-spacing:.04em;color:#a99fc6}
 footer .wrap{gap:.4rem}
 footer p{margin:0}
-footer .credit{margin-top:.6rem;color:var(--muted)}
+footer .credit{color:var(--muted)}
+
+/* ---------- CTA am Seitenende ---------- */
+.cta{position:relative;isolation:isolate;margin-top:clamp(8px,2vw,24px);padding:clamp(28px,5vw,56px) clamp(20px,5vw,56px);text-align:center;
+  background:radial-gradient(120% 140% at 50% 0%,rgba(255,42,109,.28),rgba(26,4,51,.92) 55%,rgba(5,1,15,.95));
+  box-shadow:0 0 0 1px rgba(249,240,2,.55),0 0 40px rgba(255,42,109,.35),inset 0 0 60px rgba(5,217,232,.12)}
+.cta::before{content:"";position:absolute;inset:-2px;z-index:-1;pointer-events:none;padding:2px;
+  background:conic-gradient(from var(--run),var(--mag),var(--acid),var(--cyan),var(--mag));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:run 5s linear infinite}
+.cta-cat{width:64px;height:64px;margin:0 auto 10px;display:block;animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px) rotate(-4deg)}}
+.cta-kicker{margin:0 0 .4rem;font:700 .8rem/1.3 var(--f-mono);letter-spacing:.2em;color:var(--acid)}
+.cta h2{margin:0 auto .7rem;font:700 clamp(2rem,6vw,3.6rem)/1.02 var(--f-cond);font-stretch:condensed;color:#fff;max-width:20ch;
+  text-shadow:0 0 .4em rgba(255,42,109,.55)}
+.cta .when{margin:0 auto 1.4rem;max-width:62ch;color:var(--text)}
+.cta-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.btn.cta-btn{min-height:56px;padding:.8em 1.4em;font-size:1.1rem;background:var(--acid);border-color:var(--acid);color:var(--ink);
+  box-shadow:0 0 0 3px rgba(249,240,2,.25),0 0 30px rgba(249,240,2,.45);animation:ctaglow 2.4s ease-in-out infinite}
+.btn.cta-btn:hover{background:#fffb7a;color:var(--ink);box-shadow:0 0 0 4px rgba(249,240,2,.35),0 0 44px rgba(249,240,2,.65)}
+.btn.cta-btn svg{width:1.2em;height:1.2em}
+@keyframes ctaglow{50%{box-shadow:0 0 0 6px rgba(249,240,2,.18),0 0 48px rgba(249,240,2,.6)}}
+.cta-note{margin:1.2rem 0 0;font-weight:600;color:var(--cyan)}
 
 /* ---------- Bewegter Hintergrund der Abschnitte ---------- */
 .bgfx,.fgfx{position:absolute;inset:0;pointer-events:none}
@@ -254,6 +275,7 @@ tbody tr:hover{background:rgba(5,217,232,.06)}
   .js .panel,.js .panel.in{opacity:1;transform:none;transition:none;animation:none}
   .js .panel.in::after{animation:none}
   .challenges li,.challenges li:hover{transition:none;transform:none}
+  .cta::before,.cta-cat,.btn.cta-btn{animation:none}
 }
 </style>
 </head>
@@ -420,12 +442,23 @@ tbody tr:hover{background:rgba(5,217,232,.06)}
         <p>Der Mitmach-Tag wird gefördert durch das Land Nordrhein-Westfalen im Programm <a href="https://www.engagiert-in-nrw.de/foerderprogramm-2000-x-1000-euro-fuer-das-engagement">„2.000 x 1.000 Euro für das Engagement“</a>.</p>
       </div>
     </section>
+
+    <section class="cta" id="mitmachen" aria-labelledby="h-cta">
+      <svg class="cta-cat" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 27 18 7 29 19M50 27 46 7 35 19" fill="none" stroke="#ff2a6d" stroke-width="4" stroke-linejoin="round"/><ellipse cx="32" cy="37" rx="21" ry="18" fill="#1a0640" stroke="#05d9e8" stroke-width="4"/><ellipse cx="24.5" cy="35" rx="4" ry="3" fill="#d7ff50"/><ellipse cx="39.5" cy="35" rx="4" ry="3" fill="#d7ff50"/><path d="M28.5 42h7l-3.5 3.5z" fill="#ff7ab8"/></svg>
+      <p class="cta-kicker">SA 17.10. · AB 11 UHR</p>
+      <h2 id="h-cta">Vorbeikommen, wann es passt.</h2>
+      <p class="when">Samstag, 17. Oktober 2026, ab 11 Uhr, Ende offen · bitcircus101, Dorotheenstraße 101, 53113 Bonn · Kostenlos und ohne Anmeldung</p>
+      <div class="cta-actions">
+        <button type="button" class="btn cta-btn js-ics" id="cta-ics"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3" width="12" height="11" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 6.5h12M5 1.5v3M11 1.5v3" stroke="currentColor" stroke-width="1.6"/></svg>Termin in den Kalender</button>
+        <a class="btn alt" href="mailto:goern@machdenstaat.de">Kurz Bescheid geben</a>
+      </div>
+      <p class="cta-note">Bring deine Frage an den Stadtrat mit.</p>
+    </section>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Die Straßenszene ist eine fiktive Darstellung Bonns.</p>
     <p>Hack den Stadtrat · Samstag, 17. Oktober 2026 · bitcircus101, Dorotheenstraße 101, 53113 Bonn</p>
     <p class="credit">by <a href="https://paderta.com/">Damian Paderta</a></p>
   </div>
@@ -980,7 +1013,7 @@ var PTM=150,pX=new Float32Array(PTM),pY=new Float32Array(PTM),pVX=new Float32Arr
 var MODES=[{n:'NIESEL',k:'Niesel',drops:420,len:0.6,rip:0.25,vol:0.05,lvl:1},{n:'LANDREGEN',k:'Landregen',drops:1000,len:1,rip:0.55,vol:0.11,lvl:2},{n:'WOLKENBRUCH',k:'Wolkenbruch',drops:1700,len:1.4,rip:1,vol:0.2,lvl:3}];
 var WIND=0.26,PETAL_TINT=[],ACT=[],STEAMSPR=null;
 
-function dropCount(){var n=MODES[S.rain].drops;return Math.min(RMAX,Math.round(n*(reduced?0.35:1)*clamp(S.W*S.H/(1440*900),0.35,1.4)));}
+function dropCount(){var n=MODES[S.rain].drops;return Math.min(RMAX,Math.round(n*(reduced?0.35:1)*QK[PERF.level]*clamp(S.W*S.H/(1440*900),0.35,1.4)));}
 function groundOf(z){return S.gy+(S.H-S.gy)*(0.04+z*0.92);}
 function resetDrop(i,top){var z=Math.pow(Math.random(),1.4);rZ[i]=z;rX[i]=rr(-S.H*WIND,S.W+20);rY[i]=top?rr(-S.H,0):rr(-40,groundOf(z));rV[i]=(700+900*z)*(S.H/900)*(reduced?0.55:1);}
 function initActors(){
@@ -1003,7 +1036,7 @@ function updRain(dt){
   var n=dropCount(),gy=S.gy,mode=MODES[S.rain];
   for(var i=0;i<n;i++){var v=rV[i]*dt;rY[i]+=v;rX[i]+=v*WIND;
     var g=groundOf(rZ[i]);
-    if(rY[i]>=g){if(rZ[i]>0.12&&rX[i]>0&&rX[i]<S.W){if(Math.random()<0.6)spawnSplash(rX[i],g,rZ[i]);if(Math.random()<mode.rip)spawnRipple(rX[i],g,rZ[i]);}
+    if(rY[i]>=g){if(rZ[i]>0.12&&rX[i]>0&&rX[i]<S.W){if(Math.random()<0.6*QK[PERF.level])spawnSplash(rX[i],g,rZ[i]);if(Math.random()<mode.rip)spawnRipple(rX[i],g,rZ[i]);}
       resetDrop(i,false);rY[i]=rr(-60,-5);}}
 }
 function drawRain(){
@@ -1036,7 +1069,7 @@ function updDrawSteam(dt,dx,dy){
 }
 function nearestTint(x){var best=3,bd=1e9;for(var i=0;i<SIGNS.length;i++){var d=Math.abs(SIGNS[i].sx-x);if(d<bd){bd=d;best=SIGNS[i].col===RGB.mag?0:SIGNS[i].col===RGB.cyan?1:SIGNS[i].col===RGB.acid?2:3;}}return bd<260*S.u?best:3;}
 function updDrawPetals(dt,dx){
-  if(!TREES.length)return;var u=S.u,max=reduced?50:PTM,rainK=[0.8,1.1,1.5][S.rain]*(reduced?0.55:1);
+  if(!TREES.length)return;var u=S.u,max=Math.round((reduced?50:PTM)*QK[PERF.level]),rainK=[0.8,1.1,1.5][S.rain]*(reduced?0.55:1);
   for(var i=0;i<max;i++){
     if(pY[i]<0||pX[i]<-20||pX[i]>S.W+20){
       if(Math.random()>dt*3)continue;
@@ -1266,7 +1299,7 @@ var BG=(function(){
     return(SPR[key]=c);}
 
   function size(){
-    var W=Math.max(1,bc.clientWidth),H=Math.max(1,bc.clientHeight),dpr=Math.min(2,window.devicePixelRatio||1);
+    var W=Math.max(1,bc.clientWidth),H=Math.max(1,bc.clientHeight),dpr=Math.min(B.dprCap||2,window.devicePixelRatio||1);
     if(W===B.W&&H===B.H&&dpr===B.dpr)return;
     B.W=W;B.H=H;B.dpr=dpr;SPR={};
     [bc,fc].forEach(function(c){c.width=Math.round(W*dpr);c.height=Math.round(H*dpr);});
@@ -1303,7 +1336,7 @@ var BG=(function(){
   function rain(dt){
     if(reduced)return;
     b.font='600 13px '+MONO;b.textAlign='center';
-    for(var i=0;i<B.cols.length;i++){var c=B.cols[i];
+    for(var i=0;i<B.cols.length;i++){var c=B.cols[i];if(B.q&&i%2)continue;
       if(!c.on){c.wait-=dt;if(c.wait<=0){c.on=true;c.y=-rr(0,100);c.sp=rr(60,170);c.len=(rr(8,20))|0;c.ch=[];}continue;}
       c.y+=c.sp*dt;if(Math.random()<0.15||c.ch.length<c.len){c.ch.unshift(CHARS[(Math.random()*CHARS.length)|0]);if(c.ch.length>c.len)c.ch.pop();}
       for(var k=0;k<c.ch.length;k++){var y=c.y-k*16;if(y<-16||y>B.H+16)continue;var a=k===0?0.9:0.38*(1-k/c.len);
@@ -1312,7 +1345,7 @@ var BG=(function(){
   }
   function words(dt){
     b.textAlign='center';b.textBaseline='middle';
-    for(var i=0;i<B.words.length;i++){var w=B.words[i];
+    for(var i=0;i<B.words.length;i++){if(B.q===2&&i%2)continue;var w=B.words[i];
       if(!reduced){w.x+=w.vx*dt;w.y+=(w.vy-B.vel*0.06*w.d)*dt;}
       if(w.y<-60)w.y=B.H+60;if(w.y>B.H+60)w.y=-60;if(w.x<-150)w.x=B.W+150;if(w.x>B.W+150)w.x=-150;
       if(!reduced&&w.g<=0&&Math.random()<dt*0.08)w.g=0.25;
@@ -1324,7 +1357,7 @@ var BG=(function(){
   }
   function drones(dt){
     if(reduced)return;
-    if(B.drones.length<2&&Math.random()<dt*0.12)spawnDrone();
+    if(B.drones.length<(B.q?1:2)&&Math.random()<dt*0.12)spawnDrone();
     for(var i=B.drones.length-1;i>=0;i--){var d=B.drones[i];d.x+=d.dir*d.sp*dt;var y=d.y+Math.sin(B.t*1.7+d.ph)*6;
       if(d.x<-80||d.x>B.W+80){B.drones.splice(i,1);continue;}
       var ang=Math.sin(B.t*0.7+d.ph)*0.5,len=B.H*0.75,bx=d.x+Math.sin(ang)*len,by=y+Math.cos(ang)*len,sp=len*0.22;
@@ -1372,8 +1405,12 @@ var BG=(function(){
     B.t+=dt;b.clearRect(0,0,B.W,B.H);
     grid(dt);words(dt);rain(dt);drones(dt);cats(dt);glitch(dt);sparks(dt);
   }
+  function perf(raw){
+    if(!raw||raw>0.25||B.t<2||B.q>=2)return;B.ps=(B.ps||0)+raw;B.pn=(B.pn||0)+1;if(B.pn<90&&(B.ps<1.5||B.pn<10))return;
+    var avg=B.ps/B.pn*1000;B.ps=0;B.pn=0;if(avg>24){B.q=(B.q||0)+1;if(B.q===2){B.dprCap=1;B.W=0;size();}}
+  }
   function frame(now){
-    B.raf=0;var dt=B.last?Math.min(0.05,(now-B.last)/1000):1/60;B.last=now;
+    B.raf=0;var raw=B.last?(now-B.last)/1000:0,dt=B.last?Math.min(0.05,raw):1/60;B.last=now;perf(raw);
     var s=window.scrollY||0;B.vel=lerp(B.vel,(s-B.sc)/Math.max(dt,0.001),0.2);B.sc=s;
     var r=bc.getBoundingClientRect();B.top=r.top;
     draw(dt);
@@ -1587,9 +1624,21 @@ function render(dt){
   if(S.flash>0.01){ctx.globalCompositeOperation='lighter';ctx.fillStyle='rgba(150,140,255,'+Math.min(0.3,S.flash*0.2)+')';ctx.fillRect(0,0,W,H);ctx.globalCompositeOperation='source-over';}
   toggleWindows(dt);hudFrame(dt);audioFrame();
 }
+/* Adaptive Qualität: misst Bildintervalle (90 Bilder oder 1,5 s); liegt der Mittelwert über 24 ms,
+   wird eine Stufe gedrosselt: 1 weniger Partikel, 2 Auflösung 1× (bzw. 0,7× bei DPR 1), 3 Auflösung 0,7× */
+var PERF={n:0,sum:0,level:0},QK=[1,0.6,0.4,0.35];
+function perfSample(raw){
+  if(!raw||raw>0.25||S.t<2||PERF.level>=3)return;
+  PERF.sum+=raw;PERF.n++;if(PERF.n<90&&(PERF.sum<1.5||PERF.n<10))return;
+  var avg=PERF.sum/PERF.n*1000;PERF.n=0;PERF.sum=0;
+  if(avg<=24)return;
+  PERF.level++;hero.setAttribute('data-quality',String(3-PERF.level));
+  var cap=PERF.level===1?S.dpr:PERF.level===2&&S.dpr>1?1:0.7;
+  if(cap<S.dpr){S.dprCap=cap;S.W=0;rebuild();}else if(PERF.level===2){PERF.level=3;S.dprCap=0.7;S.W=0;rebuild();}
+}
 function frame(now){
-  S.raf=0;var dt=S.last?Math.min(0.05,(now-S.last)/1000):1/60;S.last=now;S.t+=dt;
-  render(dt);
+  S.raf=0;var raw=S.last?(now-S.last)/1000:0,dt=S.last?Math.min(0.05,raw):1/60;S.last=now;S.t+=dt;
+  render(dt);perfSample(raw);
   if(S.visible&&!document.hidden)S.raf=requestAnimationFrame(frame);
 }
 function start(){if(!S.raf&&S.visible&&!document.hidden){S.last=0;S.raf=requestAnimationFrame(frame);}}
@@ -1597,7 +1646,7 @@ function stop(){if(S.raf){cancelAnimationFrame(S.raf);S.raf=0;}audioQuiet();}
 
 /* ---------- Größe ---------- */
 function setSize(){
-  var r=hero.getBoundingClientRect(),W=Math.max(1,Math.round(r.width)),H=Math.max(1,Math.round(r.height)),dpr=Math.min(2,window.devicePixelRatio||1);
+  var r=hero.getBoundingClientRect(),W=Math.max(1,Math.round(r.width)),H=Math.max(1,Math.round(r.height)),dpr=Math.min(S.dprCap||2,window.devicePixelRatio||1);
   if(W===S.W&&H===S.H&&dpr===S.dpr)return false;
   S.W=W;S.H=H;S.dpr=dpr;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);
   S.u=clamp(Math.min(H/900,W/700),0.55,1.6);S.gy=Math.round(H*0.74);S.rs=clamp(W/1400,0.45,1.3);
@@ -1644,7 +1693,7 @@ var peekBtn=document.getElementById('btn-peek');
 if(peekBtn)peekBtn.addEventListener('click',function(){var on=!hero.classList.contains('is-peek');hero.classList.toggle('is-peek',on);
   peekBtn.setAttribute('aria-expanded',on?'false':'true');peekBtn.setAttribute('aria-label',on?'Infos wieder einblenden':'Infos einklappen und Szene ansehen');peekBtn.title=on?'Infos zeigen':'Szene ansehen';});
 /* Kalenderdatei (.ics) ohne Netzwerkzugriff erzeugen; Ende offen, daher ohne DTEND */
-var PAGE_URL='https://daimpad.github.io/hack-the-stadtrat/002-neon-rain.html';
+var PAGE_URL='https://code.paderta.com/hack-den-stadtrat/';
 function icsFold(line){var out=[],cur='',n=0,enc=window.TextEncoder?new TextEncoder():null;
   for(var ch of line){var b=enc?enc.encode(ch).length:1;if(n+b>73){out.push(cur);cur=' ';n=1;}cur+=ch;n+=b;}out.push(cur);return out.join('\r\n');}
 function icsDownload(){
