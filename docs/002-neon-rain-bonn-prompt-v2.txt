@@ -1,0 +1,116 @@
+TITEL: Hack den Stadtrat — Neon Rain Bonn
+DATEI: 002-neon-rain.html
+
+=== PROMPT (exakt verwendeter Prompt) ===
+Erstelle eine Veranstaltungsseite für den Mitmach-Tag „Hack den Stadtrat“. Oben steht eine immersive Cyberpunk-Straßenszene bei Nacht in einem fiktiven Near-Future-Bonn als bildschirmfüllender Hero, darunter folgen die Veranstaltungsinformationen als semantische HTML-Abschnitte. Die Szene ist erkennbar fiktiv. Alle Veranstaltungsangaben sind real und werden wörtlich aus dem Block INHALTE übernommen; nichts wird hinzuerfunden.
+
+SZENE (Hero, volle Viewport-Höhe, Canvas):
+Eine regennasse Altstadtstraße bei Nacht, gesäumt von neonbeleuchteten Kirschbäumen, deren Blütenblätter mit dem Regen fallen. Vier Parallax-Ebenen mit Skyline-Silhouetten (#05010f → #1a0433) und zufällig beleuchteten Fenstern, aufgebaut aus erkennbaren Bonner Wahrzeichen, für die Komposition stilisiert statt lagegetreu: ganz hinten der Kamm des Siebengebirges mit der Burgruine Drachenfels; dann das Bundesviertel mit dem Post Tower (zwei versetzte, sanft gekrümmte Glasschalen) und dem Langen Eugen (schlanke rechteckige Scheibe), davor die Kennedybrücke als flaches Lichterband; dann die Dachlandschaft der Innenstadt mit dem romanischen Bonner Münster und seinem hohen Mittelturm; vorn schmale Altstadthäuser mit Giebeln, Mansarddächern, Gauben und Erkern, die die Leuchtschilder tragen. An einer der vorderen Fassaden markiert ein stabil leuchtender Neonschriftzug „bitcircus101“ in schlichter Grotesk den Veranstaltungsort (kein Logo). Vertikale Neonschilder mit deutschen Wörtern in einer schmalen Neon-Grotesk greifen das Thema auf (RATSDATEN, OPARL, OFFENE DATEN, MITMACHEN, STADTRAT, KI, SA 17.10.), daneben Straßenvokabular (BÜDCHEN, TRINKHALLE). Sie werden im Canvas als Glasröhren gezeichnet, Umlautpunkte als eigene Röhrensegmente, und flackern mit glaubwürdigem Neonversagen (kurze Aussetzer, Brummen). Ein Schild zeigt HAUPTSTADT, dessen „HAUPT“ dauerhaft dunkel bleibt, sodass nur STADT leuchtet. Über dem Post Tower rotiert in einem Projektorkegel langsam ein stilisiertes Wireframe-Hologramm einer Beethoven-Büste. Dampf steigt von einem Imbissstand auf, Fußgänger mit leuchtenden Schirmstöcken und Radfahrende mit beleuchteten Rädern ziehen vorbei. Nasses Kopfsteinpflaster spiegelt die Schilder (gespiegelt, unscharf, gekräuselt); dichter diagonaler Regen mit Spritzpartikeln am Boden. Palette: Hot Magenta #ff2a6d, Cyan #05d9e8 und Acid Yellow #f9f002 als Akzente auf Tintenschwarz. Keine realen Markennamen oder Logos in der Kulisse; reale Namen erscheinen nur als Veranstaltungsangaben.
+
+HERO-INHALT (echtes HTML über dem Canvas, nicht in den Canvas gezeichnet):
+Überschrift „Hack den Stadtrat“ in schmaler Versal-Grotesk mit Chromatic-Aberration-Textschatten. Darunter ohne Effekte und gut lesbar: „Mitmach-Tag zu offenen Ratsdaten und KI“, „Samstag, 17. Oktober 2026, ab 11 Uhr, Ende offen“, „bitcircus101, Dorotheenstraße 101, 53113 Bonn“, „Kostenlos und ohne Anmeldung“. Zwei Aktionen: ein Anker zum Abschnitt „Ablauf“ und ein mailto-Link an goern@machdenstaat.de mit der Beschriftung „Kurz Bescheid geben“. Ein schmales HUD in Monospace zeigt Ortszeit, einen Countdown bis Samstag, 17.10.2026, 11:00 Uhr (fest auf Europe/Berlin, also 2026-10-17T11:00:00+02:00; am 17.10. ab 11 Uhr „LÄUFT · ENDE OFFEN“, ab dem 18.10. „VERANSTALTUNG VORBEI“), die Niederschlagsanzeige der Szene und SIGNAL-Balken. Ein laufender Ticker in Monospace enthält ausschließlich Angaben aus dem Block INHALTE (Datum, Uhrzeit, Ort, „kostenlos, ohne Anmeldung, kein Programmierwissen“, die vier Challenges) sowie die Zeile „BONN WAR 1949–1990 HAUPTSTADT · JEDE WOCHE ENTSCHEIDET DER BONNER RAT ÜBER KITAS, RADWEGE UND BAUPROJEKTE“.
+
+INTERAKTION (Szene):
+Der Pointer bewegt die Parallax-Kamera; ein Klick in die Szene löst einen Blitz aus, der die gesamte Skyline bis zum Siebengebirge kurz erhellt, dazu Donnergrollen (Web-Audio-Rauschen, erst nach einer Geste, mit Stummschalter); ein Schalter wechselt die Regenstärke zwischen NIESEL, LANDREGEN und WOLKENBRUCH. Die Szene bleibt mit gepoolten Partikeln flüssig bei 60 fps und pausiert, sobald der Hero aus dem sichtbaren Bereich gescrollt ist.
+
+ABSCHNITTE UNTER DEM HERO (semantisches HTML):
+Gleiche Palette, Panels mit Eckklammern im HUD-Stil, Fließtext ohne Glitch- oder Aberrationseffekte, Kontrast mindestens WCAG AA, Zeilenlänge höchstens etwa 70 Zeichen. Reihenfolge: Einleitung; Auf einen Blick; Ablauf (als <table> mit <caption> und <th scope>); Die Challenges; Datengrundlage; Über machdenstaat.de; Förderung. Fußzeile mit dem Hinweis „Die Straßenszene ist eine fiktive Darstellung Bonns.“ Kartenlink und Förderhinweis nur als Text-Links, keine eingebettete Karte, kein externes Logo. Zusätzlich ein Inline-JSON-LD-Block (schema.org/Event) mit Name, startDate 2026-10-17T11:00:00+02:00, eventAttendanceMode Offline, Ort mit Adresse, isAccessibleForFree true und Veranstalter machdenstaat.de.
+<title>: „Hack den Stadtrat – Mitmach-Tag am 17. Oktober 2026 | bitcircus101 Bonn“
+Meta-Description: „Mitmach-Tag zu offenen Ratsdaten und KI: Samstag, 17. Oktober 2026, ab 11 Uhr im bitcircus101, Bonn. Kostenlos, ohne Anmeldung, kein Programmierwissen nötig.“
+
+--- INHALTE (wörtlich übernehmen; Links als normale Anker) ---
+
+[Titel]
+Hack den Stadtrat: Mitmach-Tag zu offenen Ratsdaten und KI am 17. Oktober
+
+[Einleitung]
+Der Stadtrat entscheidet, du kannst nachlesen. Am Samstag, 17. Oktober 2026, laden wir zum Mitmach-Tag ins bitcircus101 (https://bitcircus101.de/): ab 11 Uhr, Ende offen, kostenlos und ohne Anmeldung. Gemeinsam finden wir heraus, was im Bonner Rat wirklich beschlossen wird.
+
+Jede Woche entscheidet der Bonner Rat über Kitas, Radwege und Bauprojekte. Die Unterlagen dazu sind öffentlich, aber in Tausenden PDFs verstreut. Beim Mitmach-Tag zeigen wir, wie man mit offenen Ratsdaten (OParl) und KI-Werkzeugen selbst herausfindet, was in der Kommunalpolitik passiert:
+- Sitzungsprotokolle automatisch zusammenfassen lassen
+- Beschlüsse zu einem Thema finden, etwa „Radverkehr in Beuel“
+- Eigene Fragen an die Ratsdaten stellen, direkt am Laptop mit uns
+
+Vorbeikommen, wann es passt. Keine Anmeldung, kein Programmierwissen, kostenlos. Für Mittagessen ist gesorgt. Bring deine Frage an den Stadtrat mit.
+
+Anmelden musst du dich nicht. Wenn du uns kurz an goern@machdenstaat.de (mailto:goern@machdenstaat.de) schreibst, dass du kommst, erleichtert uns das aber die Planung.
+
+[Auf einen Blick]
+- Wann: Samstag, 17. Oktober 2026, ab 11 Uhr, Ende offen
+- Wo: bitcircus101 (https://bitcircus101.de/), Dorotheenstraße 101, 53113 Bonn (Karte: https://www.openstreetmap.org/?mlat=50.74042&mlon=7.08942#map=18/50.74042/7.08942 · Kontakt: https://bitcircus101.de/#contact)
+- Für wen: interessierte Bonner:innen, Lokaljournalist:innen, Blogger:innen und Initiativen
+- Was du brauchst: Neugier. Wenn du hast, bring einen Laptop mit.
+
+[Ablauf]
+Zwei feste Kick-offs sorgen dafür, dass du jederzeit einsteigen kannst.
+Zeit | Programm
+11:00 | Doors open. Ankommen, Kaffee, Laptops auspacken
+11:30 | Kick-off (15 Min.): Was sind OParl-Daten, was kann die API? Die Challenges werden vorgestellt
+12:00 | Loslegen: Teams bilden sich rund um die Challenges
+13:30 | Mittagessen: Catering für alle
+15:00 | Zweiter Kick-off (15 Min.) für alle, die später kommen
+17:30 | Demos: jedes Team zeigt in 5 Minuten, was es herausgefunden oder gebaut hat
+18:30 | Feedback und Ausblick
+danach | Open End im bitcircus101: weitermachen, feiern, den Ort genießen
+
+[Die Challenges]
+- Ohne Code: Mit KI eine Ratssitzung zusammenfassen: Was wurde wirklich beschlossen?
+- Themen-Tracker: Alle Vorlagen zu einem Thema über die Zeit verfolgen
+- Visualisierung: Wer bringt welche Anträge ein, und was wird daraus?
+- Eigene Frage: Bring deine Frage an den Stadtrat mit, wir suchen gemeinsam die Daten dazu
+
+[Datengrundlage]
+Grundlage ist unser offener Spiegel der Bonner Ratsinformationen unter oparl.bonn.machdenstaat.de (https://oparl.bonn.machdenstaat.de/). Wie man damit arbeitet, zeigt unser Beitrag „Der Bonner Rat, durchsuchbar“ (https://machdenstaat.de/blog/der-bonner-rat-durchsuchbar-zwei-wege-durch-oparl-lite/).
+
+[Über machdenstaat.de]
+Mach! Den! Staat! ist eine ehrenamtliche Civic-Tech-Initiative aus Bonn. Wir finden: Politik ist kein Zuschauersport. Wer wissen will, was im Rat passiert, soll das ohne Umwege herausfinden können.
+
+Deshalb machen wir die Bonner Ratsinformationen als offene Daten zugänglich und schreiben auf unserem Blog über Bonner Kommunalpolitik, vom Radverkehr über die Nordbrücke bis zum Bürgerantrag. Dabei leiten uns drei Werte: Transparenz, Wirksamkeit und Spaß.
+
+Was wir vorhaben und wie es läuft, erfährst du zuerst auf Mastodon: Folge uns unter @machdenstaat@mastodon.social (https://mastodon.social/@machdenstaat). Wer mitmachen will, ist willkommen.
+
+[Förderung]
+Der Mitmach-Tag wird gefördert durch das Land Nordrhein-Westfalen im Programm „2.000 x 1.000 Euro für das Engagement“ (https://www.engagiert-in-nrw.de/foerderprogramm-2000-x-1000-euro-fuer-das-engagement).
+
+--- ENDE INHALTE ---
+
+SEITENSPEZIFISCHE ABWEICHUNG UND KLARSTELLUNG ZU DEN SHARED REQUIREMENTS:
+- Requirement 2: <html lang="de"> statt lang="en", da Seite und Zielgruppe deutschsprachig sind.
+- Requirement 1: Hyperlinks auf externe Seiten sind als normale Anker zulässig, da aus ihnen nichts geladen wird. Eingebettete Karten, externe Bilder und Logos bleiben ausgeschlossen.
+
+SHARED REQUIREMENTS (apply to every page in this 100-page collection):
+1. One standalone HTML5 file. All CSS inline in <style>, all JavaScript inline in <script>. No external resources of any kind: no CDN, no libraries, no web fonts, no external images/SVG/audio files, no network requests. All visuals come from CSS, inline SVG, Canvas and procedural code.
+2. Valid HTML5: <!DOCTYPE html>, <html lang="en">, <meta charset="utf-8">, a viewport meta tag, a meaningful <title> and meta description, well-nested semantic markup, unique ids, labels/aria attributes for controls, <button type="button"> for actions.
+3. Typography from local system font stacks only, always ending in a generic family; display lettering may be drawn with SVG or Canvas.
+4. Responsive from 360px phones to large desktops with no horizontal page scroll; canvases match their container and devicePixelRatio (capped at 2) and re-layout on resize.
+5. Works offline by opening the file directly (file://); no console errors; storage access guarded with try/catch.
+6. Smooth motion via requestAnimationFrame and transform/opacity; animation pauses when the tab is hidden where it matters; honours prefers-reduced-motion with a calmer fallback.
+7. Pointer events so mouse and touch both work; visible :focus-visible styles; keyboard support where it makes sense.
+8. Any sound is synthesized with the Web Audio API, starts only after a user gesture, and has a visible mute/toggle.
+9. Premium finish: a deliberate palette and spacing, polished micro-interactions, a beautiful first frame before any interaction, and original copy (no lorem ipsum). Factual content must be accurate; fictional brands, people and data are clearly fictional.
+10. Quality bar: visually impressive, bookmark-worthy, showcase-grade, premium, full of delightful details, and clearly distinct from the other 99 pages in concept, layout, palette, typography and motion.
+
+
+=== BESCHREIBUNG ===
+Eine Veranstaltungsseite für den Mitmach-Tag „Hack den Stadtrat“ am 17. Oktober 2026 im bitcircus101 in Bonn. Den Einstieg bildet eine bildschirmfüllende, live gerenderte Cyberpunk-Straßenszene in einem fiktiven Near-Future-Bonn: eine regennasse Altstadtstraße mit neonbeleuchteten Kirschbäumen, dahinter das Münster, das Bundesviertel mit Post Tower, Langem Eugen und dem Lichterband der Kennedybrücke, am Horizont das Siebengebirge mit der Drachenfels-Ruine. Hunderte Fenster gehen über die Zeit an und aus. Handgezeichnete Neonschilder mit deutschen Wörtern in schmaler Grotesk greifen das Thema auf, etwa RATSDATEN, OPARL und MITMACHEN, und leuchten in Hot Magenta, Cyan und Acid Yellow. Sie versagen, wie echtes Neon versagt: Stottern, Aussetzer, Spannungseinbrüche, ein einzelner toter Umlautpunkt und ein HAUPTSTADT-Schild, dessen „HAUPT“ dunkel bleibt. Das ist ein Verweis auf Bonns Zeit als Hauptstadt der Bundesrepublik (1949–1990), den der Ticker aufgreift. Über einer Tür markiert der Schriftzug „bitcircus101“ den Veranstaltungsort. Über dem Post Tower rotiert eine stilisierte Wireframe-Büste Beethovens in einem Projektorkegel. Dampf steigt von einem Imbissstand auf, Fußgänger mit leuchtenden Schirmstöcken und Radfahrende mit beleuchteten Rädern ziehen vorbei. Alles spiegelt sich im regengekräuselten, unscharfen, nassen Kopfsteinpflaster, über das dichter diagonaler Regen spritzt. Über der Szene stehen Titel, Datum, Ort und zwei Aktionen als echtes HTML, dazu ein schmales Monospace-HUD mit Countdown und ein Ticker mit Veranstaltungsangaben. Darunter folgen die Veranstaltungsinformationen als ruhig gesetzte Abschnitte im HUD-Stil: Einleitung, Auf einen Blick, Ablauf, Challenges, Datengrundlage, Über machdenstaat.de und Förderung.
+
+=== WICHTIGSTE VISUELLE TECHNIKEN ===
+- Vier vorgerenderte Skyline-Ebenen als Canvas (normal und als halbaufgelöste „Blitzfassaden“-Version), mit ebenenweisen Parallax-Bereichen und violetten Nebelbändern zwischen den Tiefen zusammengesetzt; von hinten nach vorn: Siebengebirgskamm mit Drachenfels-Ruine, Bundesviertel mit dem Lichterband der Kennedybrücke, Innenstadt-Dachlandschaft mit Münsterturm, Altstadthäuser
+- Prozedurale Gebäude: Gründerzeitgiebel, Mansarddächer, Gauben, Erker, Schornsteine und Satellitenschüsseln in den vorderen Ebenen; parametrische Silhouetten für den Post Tower (zwei versetzte, gekrümmte Glasschalen mit senkrechter Lichtfuge) und den Langen Eugen, beide mit blinkender Flugbefeuerung; Neon-Kantenlicht in den vorderen Ebenen; Fensterwechsel direkt in die Ebenen-Canvases gemalt
+- Neonschilder aus handgezeichneten Polylinien-Glyphen einer schmalen Grotesk einschließlich Ä, Ö, Ü, ß und Ziffern, als Glasröhren gestrichen (breiter Glow-Pass, zweiter Glow, heller Kern); Umlautpunkte als unabhängige Röhrensegmente; zwischengespeichert in den Varianten an / defektes Zeichen / aus, dazu Lichtschein-Sprites und ein wandernder holografischer Scan-Streifen
+- Ausfall-Zustandsautomat pro Schild (Stottern, Aussetzer, Spannungseinbruch, Flackern eines toten Zeichens, unabhängiger Ausfall von Umlautpunkten) mit Brumm-Jitter; das sterbende Schild steuert ein synthetisches 100-Hz-Neonbrummen (doppelte europäische Netzfrequenz von 50 Hz); der Schriftzug „bitcircus101“ ist vom Ausfall ausgenommen und bleibt lesbar
+- Spiegelung auf nassem Pflaster: Der untere Szenenteil wird in jedem Frame in einen niedrig aufgelösten, gespiegelten Puffer kopiert und zeilenweise mit überlagerten Sinusversätzen neu gezeichnet (gespiegelt, durch Hochskalieren weichgezeichnet, gekräuselt), unter einem Kopfsteinpflaster-Overlay mit weichen Pfützenausschnitten und Granitbordstein
+- Gepoolte Partikelsysteme mit typisierten Arrays: bis zu 1.700 tiefensortierte Regenstriche in drei gebündelten Strich-Durchgängen, 700 Spritztropfen mit Schwerkraft, 260 abgeflachte Ringwellen, 44 Dampfwolken und bis zu 150 taumelnde Kirschblütenblätter, eingefärbt vom nächstgelegenen Neon
+- Holografische Beethoven-Büste: prozedurales Kopf-Mesh aus einem verformten Ellipsoid (Stirnwulst, Nase, Kiefer, Hals, hoher Kragen und Halstuch), als tiefenschattierte Breiten- und Längenlinien gezeichnet; rauschgesteuerte, fließende Haarsträhnen als Polylinien; langsame Rotation mit leichter Drehung zum Pointer; magentafarbener chromatischer Geist, destination-out-Scanlines, Glow-Pass und gelegentliche Slice-Glitches; projiziert von einem Lichtkegel auf dem Dach des Post Tower
+- Blitz: verzweigter Blitz per Mittelpunktverschiebung in drei additiven Durchgängen; mehrpulsige Helligkeitshüllkurve über Himmel, Wolken, allen Skyline-Fassaden und dem Siebengebirgskamm; das Hologramm zerfällt kurz und setzt sich neu zusammen
+- CSS: schmale Versal-Überschrift mit Chromatic-Aberration-Textschatten und clip-path-Slice-Glitches (nur der Hero-Titel), Scanline- und Vignetten-Overlay über der Szene, HUD mit Eckklammern, Ticker per CSS-Transform; Abschnitte darunter als Panels mit Eckklammern, Fließtext ohne Effekte
+- Seitenstruktur: Hero mit 100svh, darunter Abschnitte mit begrenzter Zeilenlänge; ein IntersectionObserver pausiert das Rendering und blendet den Regenton aus, sobald der Hero nicht sichtbar ist; Inline-JSON-LD (schema.org/Event)
+
+=== INTERAKTIONSMODELL ===
+- Pointer- oder Touch-Bewegung über dem Hero steuert die Parallax-Kamera, ohne das vertikale Scrollen zu blockieren (touch-action: pan-y); nach vier Sekunden ohne Eingabe driftet die Kamera selbstständig; Pfeiltasten verschieben sie nur, solange die Szene fokussiert ist
+- Klick oder Tap in die Szene (oder Taste B bzw. Leertaste bei fokussierter Szene, oder die Schaltfläche BLITZ) löst einen Einschlag nahe dem Pointer aus: Die Skyline leuchtet bis zum Siebengebirge auf, das HUD glitcht, die SIGNAL-Balken fallen ab, das Hologramm zerfällt, und mit Entfernungsverzögerung folgt Donnergrollen; Klicks auf Links und Schaltflächen lösen keinen Blitz aus
+- Ton (Web Audio, erst nach einer Geste): Regenrauschen aus gefiltertem Rauschen, gepanntes Brown-Noise-Donnern mit Knall- und Grollmodulation, ein 100-Hz-Neonbrummen synchron zum sterbenden Schild und gelegentlich nach einem Einschlag eine leise, glitchende synthetische Wiedergabe des viertönigen Kopfmotivs von Beethovens Fünfter Sinfonie (gemeinfrei) aus dem Hologrammprojektor; die Schaltfläche TON oder die Taste T schaltet stumm
+- Die Schaltfläche REGEN oder die Taste R wechselt zwischen NIESEL, LANDREGEN und WOLKENBRUCH und ändert Tropfendichte, Wellenstärke, Niederschlagsanzeige und Regenlautstärke
+- Das HUD zeigt Ortszeit, den Countdown bis zum 17.10.2026, 11:00 Uhr (Europe/Berlin), den Niederschlag und animierte SIGNAL-Balken; Hover oder Fokus auf dem Ticker pausiert ihn
+- Hero-Aktionen: Anker zum Abschnitt „Ablauf“ (sanftes Scrollen, bei reduzierter Bewegung ohne Animation) und mailto-Link an goern@machdenstaat.de
+- prefers-reduced-motion: weniger und langsamerer Regen, weniger und langsamere Blütenblätter, ruhiges Neon, keine Umgebungsblitze, ein sanfter Blitz pro Einschlag, langsamere Hologramm-Rotation und ein nahezu stehender Ticker; Rendering pausiert und Audio wird angehalten, solange der Tab verborgen oder der Hero nicht sichtbar ist

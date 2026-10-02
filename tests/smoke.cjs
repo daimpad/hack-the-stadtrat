@@ -53,6 +53,11 @@ const configs = [
     check(/BEGIN:VEVENT/.test(ics) && /DTSTART:20261017T090000Z/.test(ics), `${name}: Kalenderdatei unvollständig`);
     check(ics.split('\r\n').every((l) => Buffer.byteLength(l, 'utf8') <= 75), `${name}: Kalenderzeilen länger als 75 Byte`);
 
+    // CTA am Seitenende: Kalenderdatei, kein Fiktionshinweis im Footer
+    const [dl2] = await Promise.all([page.waitForEvent('download'), page.click('#cta-ics')]);
+    check(/DTSTART:20261017T090000Z/.test(fs.readFileSync(await dl2.path(), 'utf8')), `${name}: CTA liefert keine Kalenderdatei`);
+    check(!(await page.textContent('footer')).includes('fiktive'), `${name}: Footer enthält noch den Fiktionshinweis`);
+
     // Abschnitte
     await page.evaluate(() => { document.documentElement.style.scrollBehavior = 'auto'; document.getElementById('ablauf').scrollIntoView(); });
     await page.waitForTimeout(900);
