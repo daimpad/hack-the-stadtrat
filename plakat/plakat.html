@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Hack den Stadtrat – Plakat A3</title>
+<style>
+  :root{--bleed:0mm;--mag:#ff2a6d;--cyan:#05d9e8;--acid:#f9f002;--ink:#05010f}
+  @page{size:calc(297mm + 2*var(--bleed)) calc(420mm + 2*var(--bleed));margin:0}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--ink)}
+  .sheet{position:relative;width:calc(297mm + 2*var(--bleed));height:calc(420mm + 2*var(--bleed));overflow:hidden;
+    background:var(--ink) url("artwork.jpg") center/cover no-repeat;color:#fff;
+    font-family:"Bahnschrift SemiCondensed","Arial Narrow","Roboto Condensed","DejaVu Sans Condensed","DejaVu Sans",Arial,sans-serif}
+  .sheet::before{content:"";position:absolute;inset:0;background:
+    linear-gradient(180deg,rgba(5,1,15,.55) 0%,rgba(5,1,15,0) 30%,rgba(5,1,15,0) 62%,rgba(5,1,15,.7) 78%,rgba(5,1,15,.92) 100%)}
+  .safe{position:absolute;left:var(--bleed);top:var(--bleed);width:297mm;height:420mm}
+  .title{position:absolute;left:11mm;top:12mm;margin:0;display:grid;gap:0;row-gap:0}
+  .title .neon+.neon{margin-top:-9mm}
+  .title .neon{display:block;filter:drop-shadow(0 0 2.5mm rgba(255,42,109,.35))}
+  .sub{position:absolute;left:19mm;top:106mm;margin:0;font-weight:700;font-size:24pt;line-height:1.22;letter-spacing:.01em;
+    text-shadow:0 0 3mm rgba(5,1,15,.95),0 0 1mm rgba(5,1,15,.9);max-width:170mm}
+  .info{position:absolute;left:14mm;right:14mm;bottom:22mm;display:grid;grid-template-columns:1fr 60mm;gap:8mm;align-items:end;
+    padding:9mm 10mm 9mm 10mm;background:rgba(5,1,15,.72);
+    --c:var(--cyan);--l:7mm;--t:.7mm;
+    background-image:
+      linear-gradient(var(--c),var(--c)),linear-gradient(var(--c),var(--c)),linear-gradient(var(--c),var(--c)),linear-gradient(var(--c),var(--c)),
+      linear-gradient(var(--c),var(--c)),linear-gradient(var(--c),var(--c)),linear-gradient(var(--c),var(--c)),linear-gradient(var(--c),var(--c));
+    background-size:var(--l) var(--t),var(--t) var(--l),var(--l) var(--t),var(--t) var(--l),var(--l) var(--t),var(--t) var(--l),var(--l) var(--t),var(--t) var(--l);
+    background-position:top left,top left,top right,top right,bottom left,bottom left,bottom right,bottom right;background-repeat:no-repeat}
+  .date{display:block;margin:0 0 4mm -2mm}
+  .when{margin:0 0 3mm;font-size:22pt;font-weight:700}
+  .where{margin:0 0 3mm;font-size:16pt;line-height:1.3}
+  .free{margin:0;font-size:13pt;color:var(--cyan);font-weight:700;letter-spacing:.02em}
+  .qr{display:grid;justify-items:center;gap:2.5mm;text-align:center}
+  .qr .code{width:44mm;height:44mm;padding:2.5mm;background:#fff;box-shadow:0 0 0 .7mm var(--mag),0 0 6mm rgba(255,42,109,.6)}
+  .qr .code svg{display:block;width:100%;height:100%}
+  .qr .l1{font-size:12pt;font-weight:700;margin:0}
+  .qr .l2{font-family:"DejaVu Sans Mono",monospace;font-size:7pt;color:#d8d2ea;margin:0;white-space:nowrap}
+  .fine{position:absolute;left:14mm;right:14mm;bottom:9mm;margin:0;font-size:7pt;line-height:1.35;color:#c9c2de}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="safe">
+    <h1 class="title"><svg class="neon" style="width:155.0mm;height:46.0mm" viewBox="-4 -4 53.9 16" aria-label="HACK DEN" role="img">
+  <defs><filter id="h1a" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="1.1"/></filter>
+  <filter id="h1b" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="0.35"/></filter></defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0.00 0.00L0.00 8.00M4.00 0.00L4.00 8.00M0.00 4.00L4.00 4.00M6.30 8.00L6.30 2.00L7.30 0.00L9.30 0.00L10.30 2.00L10.30 8.00M6.30 4.60L10.30 4.60M16.60 1.30L15.60 0.00L13.60 0.00L12.60 1.00L12.60 7.00L13.60 8.00L15.60 8.00L16.60 6.70M18.90 0.00L18.90 8.00M22.90 0.00L18.90 5.00M20.20 3.70L22.90 8.00M29.70 0.00L29.70 8.00L32.30 8.00L33.70 6.60L33.70 1.40L32.30 0.00L29.70 0.00M39.60 0.00L36.00 0.00L36.00 8.00L39.60 8.00M36.00 4.00L39.00 4.00M41.90 8.00L41.90 0.00L45.90 8.00L45.90 0.00" stroke="#ff2a6d" stroke-width="2.4" opacity="0.55" filter="url(#h1a)"/>
+    <path d="M0.00 0.00L0.00 8.00M4.00 0.00L4.00 8.00M0.00 4.00L4.00 4.00M6.30 8.00L6.30 2.00L7.30 0.00L9.30 0.00L10.30 2.00L10.30 8.00M6.30 4.60L10.30 4.60M16.60 1.30L15.60 0.00L13.60 0.00L12.60 1.00L12.60 7.00L13.60 8.00L15.60 8.00L16.60 6.70M18.90 0.00L18.90 8.00M22.90 0.00L18.90 5.00M20.20 3.70L22.90 8.00M29.70 0.00L29.70 8.00L32.30 8.00L33.70 6.60L33.70 1.40L32.30 0.00L29.70 0.00M39.60 0.00L36.00 0.00L36.00 8.00L39.60 8.00M36.00 4.00L39.00 4.00M41.90 8.00L41.90 0.00L45.90 8.00L45.90 0.00" stroke="#ff2a6d" stroke-width="1.15" opacity="0.95" filter="url(#h1b)"/>
+    <path d="M0.00 0.00L0.00 8.00M4.00 0.00L4.00 8.00M0.00 4.00L4.00 4.00M6.30 8.00L6.30 2.00L7.30 0.00L9.30 0.00L10.30 2.00L10.30 8.00M6.30 4.60L10.30 4.60M16.60 1.30L15.60 0.00L13.60 0.00L12.60 1.00L12.60 7.00L13.60 8.00L15.60 8.00L16.60 6.70M18.90 0.00L18.90 8.00M22.90 0.00L18.90 5.00M20.20 3.70L22.90 8.00M29.70 0.00L29.70 8.00L32.30 8.00L33.70 6.60L33.70 1.40L32.30 0.00L29.70 0.00M39.60 0.00L36.00 0.00L36.00 8.00L39.60 8.00M36.00 4.00L39.00 4.00M41.90 8.00L41.90 0.00L45.90 8.00L45.90 0.00" stroke="#ffe0ea" stroke-width="0.5"/>
+  </g></svg><svg class="neon" style="width:161.3mm;height:46.0mm" viewBox="-4 -4 56.099999999999994 16" aria-label="STADTRAT" role="img">
+  <defs><filter id="h2a" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="1.1"/></filter>
+  <filter id="h2b" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="0.35"/></filter></defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.00 1.00L3.00 0.00L1.00 0.00L0.00 1.00L0.00 3.00L1.00 4.00L3.00 4.00L4.00 5.00L4.00 7.00L3.00 8.00L1.00 8.00L0.00 7.00M6.30 0.00L10.30 0.00M8.30 0.00L8.30 8.00M12.60 8.00L12.60 2.00L13.60 0.00L15.60 0.00L16.60 2.00L16.60 8.00M12.60 4.60L16.60 4.60M18.90 0.00L18.90 8.00L21.50 8.00L22.90 6.60L22.90 1.40L21.50 0.00L18.90 0.00M25.20 0.00L29.20 0.00M27.20 0.00L27.20 8.00M31.50 8.00L31.50 0.00L34.50 0.00L35.50 1.00L35.50 3.00L34.50 4.00L31.50 4.00M33.50 4.00L35.50 8.00M37.80 8.00L37.80 2.00L38.80 0.00L40.80 0.00L41.80 2.00L41.80 8.00M37.80 4.60L41.80 4.60M44.10 0.00L48.10 0.00M46.10 0.00L46.10 8.00" stroke="#05d9e8" stroke-width="2.4" opacity="0.55" filter="url(#h2a)"/>
+    <path d="M4.00 1.00L3.00 0.00L1.00 0.00L0.00 1.00L0.00 3.00L1.00 4.00L3.00 4.00L4.00 5.00L4.00 7.00L3.00 8.00L1.00 8.00L0.00 7.00M6.30 0.00L10.30 0.00M8.30 0.00L8.30 8.00M12.60 8.00L12.60 2.00L13.60 0.00L15.60 0.00L16.60 2.00L16.60 8.00M12.60 4.60L16.60 4.60M18.90 0.00L18.90 8.00L21.50 8.00L22.90 6.60L22.90 1.40L21.50 0.00L18.90 0.00M25.20 0.00L29.20 0.00M27.20 0.00L27.20 8.00M31.50 8.00L31.50 0.00L34.50 0.00L35.50 1.00L35.50 3.00L34.50 4.00L31.50 4.00M33.50 4.00L35.50 8.00M37.80 8.00L37.80 2.00L38.80 0.00L40.80 0.00L41.80 2.00L41.80 8.00M37.80 4.60L41.80 4.60M44.10 0.00L48.10 0.00M46.10 0.00L46.10 8.00" stroke="#05d9e8" stroke-width="1.15" opacity="0.95" filter="url(#h2b)"/>
+    <path d="M4.00 1.00L3.00 0.00L1.00 0.00L0.00 1.00L0.00 3.00L1.00 4.00L3.00 4.00L4.00 5.00L4.00 7.00L3.00 8.00L1.00 8.00L0.00 7.00M6.30 0.00L10.30 0.00M8.30 0.00L8.30 8.00M12.60 8.00L12.60 2.00L13.60 0.00L15.60 0.00L16.60 2.00L16.60 8.00M12.60 4.60L16.60 4.60M18.90 0.00L18.90 8.00L21.50 8.00L22.90 6.60L22.90 1.40L21.50 0.00L18.90 0.00M25.20 0.00L29.20 0.00M27.20 0.00L27.20 8.00M31.50 8.00L31.50 0.00L34.50 0.00L35.50 1.00L35.50 3.00L34.50 4.00L31.50 4.00M33.50 4.00L35.50 8.00M37.80 8.00L37.80 2.00L38.80 0.00L40.80 0.00L41.80 2.00L41.80 8.00M37.80 4.60L41.80 4.60M44.10 0.00L48.10 0.00M46.10 0.00L46.10 8.00" stroke="#e6fdff" stroke-width="0.5"/>
+  </g></svg></h1>
+    <p class="sub">Mitmach-Tag zu offenen<br>Ratsdaten und KI</p>
+    <section class="info" aria-label="Veranstaltungsangaben">
+      <div>
+        <span class="date"><svg class="neon" style="width:78.8mm;height:17.0mm" viewBox="-4 -4 74.19999999999999 16" aria-label="SA 17.10.2026" role="img">
+  <defs><filter id="d1a" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="1.1"/></filter>
+  <filter id="d1b" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="0.35"/></filter></defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.00 1.00L3.00 0.00L1.00 0.00L0.00 1.00L0.00 3.00L1.00 4.00L3.00 4.00L4.00 5.00L4.00 7.00L3.00 8.00L1.00 8.00L0.00 7.00M6.30 8.00L6.30 2.00L7.30 0.00L9.30 0.00L10.30 2.00L10.30 8.00M6.30 4.60L10.30 4.60M17.10 1.80L19.30 0.00L19.30 8.00M21.60 0.00L25.60 0.00L23.10 8.00M27.90 7.30L27.90 8.00M30.20 1.80L32.40 0.00L32.40 8.00M35.70 0.00L37.70 0.00L38.70 1.00L38.70 7.00L37.70 8.00L35.70 8.00L34.70 7.00L34.70 1.00L35.70 0.00M41.00 7.30L41.00 8.00M43.30 1.20L44.30 0.00L46.30 0.00L47.30 1.00L47.30 3.00L43.30 8.00L47.30 8.00M50.60 0.00L52.60 0.00L53.60 1.00L53.60 7.00L52.60 8.00L50.60 8.00L49.60 7.00L49.60 1.00L50.60 0.00M55.90 1.20L56.90 0.00L58.90 0.00L59.90 1.00L59.90 3.00L55.90 8.00L59.90 8.00M65.80 0.00L63.40 0.00L62.20 1.50L62.20 7.00L63.20 8.00L65.20 8.00L66.20 7.00L66.20 5.00L65.20 4.00L62.20 4.00" stroke="#f9f002" stroke-width="2.4" opacity="0.55" filter="url(#d1a)"/>
+    <path d="M4.00 1.00L3.00 0.00L1.00 0.00L0.00 1.00L0.00 3.00L1.00 4.00L3.00 4.00L4.00 5.00L4.00 7.00L3.00 8.00L1.00 8.00L0.00 7.00M6.30 8.00L6.30 2.00L7.30 0.00L9.30 0.00L10.30 2.00L10.30 8.00M6.30 4.60L10.30 4.60M17.10 1.80L19.30 0.00L19.30 8.00M21.60 0.00L25.60 0.00L23.10 8.00M27.90 7.30L27.90 8.00M30.20 1.80L32.40 0.00L32.40 8.00M35.70 0.00L37.70 0.00L38.70 1.00L38.70 7.00L37.70 8.00L35.70 8.00L34.70 7.00L34.70 1.00L35.70 0.00M41.00 7.30L41.00 8.00M43.30 1.20L44.30 0.00L46.30 0.00L47.30 1.00L47.30 3.00L43.30 8.00L47.30 8.00M50.60 0.00L52.60 0.00L53.60 1.00L53.60 7.00L52.60 8.00L50.60 8.00L49.60 7.00L49.60 1.00L50.60 0.00M55.90 1.20L56.90 0.00L58.90 0.00L59.90 1.00L59.90 3.00L55.90 8.00L59.90 8.00M65.80 0.00L63.40 0.00L62.20 1.50L62.20 7.00L63.20 8.00L65.20 8.00L66.20 7.00L66.20 5.00L65.20 4.00L62.20 4.00" stroke="#f9f002" stroke-width="1.15" opacity="0.95" filter="url(#d1b)"/>
+    <path d="M4.00 1.00L3.00 0.00L1.00 0.00L0.00 1.00L0.00 3.00L1.00 4.00L3.00 4.00L4.00 5.00L4.00 7.00L3.00 8.00L1.00 8.00L0.00 7.00M6.30 8.00L6.30 2.00L7.30 0.00L9.30 0.00L10.30 2.00L10.30 8.00M6.30 4.60L10.30 4.60M17.10 1.80L19.30 0.00L19.30 8.00M21.60 0.00L25.60 0.00L23.10 8.00M27.90 7.30L27.90 8.00M30.20 1.80L32.40 0.00L32.40 8.00M35.70 0.00L37.70 0.00L38.70 1.00L38.70 7.00L37.70 8.00L35.70 8.00L34.70 7.00L34.70 1.00L35.70 0.00M41.00 7.30L41.00 8.00M43.30 1.20L44.30 0.00L46.30 0.00L47.30 1.00L47.30 3.00L43.30 8.00L47.30 8.00M50.60 0.00L52.60 0.00L53.60 1.00L53.60 7.00L52.60 8.00L50.60 8.00L49.60 7.00L49.60 1.00L50.60 0.00M55.90 1.20L56.90 0.00L58.90 0.00L59.90 1.00L59.90 3.00L55.90 8.00L59.90 8.00M65.80 0.00L63.40 0.00L62.20 1.50L62.20 7.00L63.20 8.00L65.20 8.00L66.20 7.00L66.20 5.00L65.20 4.00L62.20 4.00" stroke="#fffbd0" stroke-width="0.5"/>
+  </g></svg></span>
+        <p class="when">ab 11 Uhr · Ende offen</p>
+        <p class="where">bitcircus101<br>Dorotheenstraße 101 · 53113 Bonn</p>
+        <p class="free">Kostenlos · ohne Anmeldung · kein Programmierwissen nötig</p>
+      </div>
+      <div class="qr">
+        <div class="code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h33v33H0z"/><path stroke="#05010f" d="M0 0.5h7m1 0h1m2 0h1m3 0h1m1 0h5m1 0h1m2 0h7M0 1.5h1m5 0h1m6 0h5m2 0h3m1 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m2 0h1m6 0h3m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m3 0h1m2 0h1m1 0h1m6 0h1m3 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h1m1 0h4m1 0h1m2 0h1m2 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h2m1 0h1m1 0h1m2 0h3m1 0h2m4 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M11 7.5h1m1 0h1m1 0h2m1 0h7M1 8.5h7m2 0h1m4 0h6m1 0h1m4 0h2m3 0h1M2 9.5h1m5 0h1m2 0h4m3 0h4m1 0h1m2 0h2m1 0h2m1 0h1M5 10.5h3m4 0h2m1 0h2m1 0h1m2 0h1m3 0h2m1 0h1m1 0h1M1 11.5h1m1 0h2m2 0h4m4 0h2m4 0h2m2 0h1m2 0h5M0 12.5h2m1 0h7m1 0h1m2 0h1m1 0h1m1 0h2m2 0h2m1 0h1m1 0h3m1 0h2M0 13.5h1m9 0h7m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1m1 0h2M6 14.5h1m2 0h2m1 0h3m6 0h2m2 0h2m1 0h2m1 0h1M0 15.5h2m2 0h1m2 0h2m1 0h2m1 0h6m1 0h2m3 0h6M3 16.5h1m2 0h3m2 0h1m4 0h1m6 0h3m1 0h2m3 0h1M0 17.5h1m10 0h1m1 0h2m1 0h2m1 0h3m1 0h1m2 0h2m1 0h2m1 0h1M1 18.5h3m1 0h3m1 0h2m1 0h1m1 0h4m3 0h2m2 0h1m1 0h2m1 0h2M0 19.5h4m1 0h1m2 0h4m1 0h3m1 0h1m2 0h2m2 0h1m2 0h5M2 20.5h1m3 0h1m4 0h2m3 0h1m3 0h1m1 0h4m1 0h3m2 0h1M0 21.5h3m1 0h2m3 0h3m1 0h1m4 0h3m1 0h3m1 0h1m5 0h1M0 22.5h1m2 0h2m1 0h3m1 0h6m1 0h1m2 0h1m1 0h1m2 0h1m2 0h1m1 0h2M0 23.5h1m2 0h2m2 0h1m1 0h3m3 0h1m1 0h1m3 0h1m5 0h1m1 0h2M0 24.5h1m1 0h1m1 0h4m1 0h1m1 0h1m2 0h1m1 0h1m3 0h1m1 0h1m1 0h5m2 0h2M8 25.5h1m1 0h1m1 0h1m1 0h1m4 0h3m2 0h1m3 0h1m1 0h1m1 0h1M0 26.5h7m1 0h4m2 0h5m1 0h5m1 0h1m1 0h1m1 0h2M0 27.5h1m5 0h1m1 0h2m4 0h3m4 0h1m1 0h2m3 0h3m1 0h1M0 28.5h1m1 0h3m1 0h1m1 0h2m1 0h3m1 0h2m1 0h2m2 0h1m1 0h6m1 0h2M0 29.5h1m1 0h3m1 0h1m1 0h1m3 0h1m2 0h2m1 0h8m2 0h1m1 0h1m1 0h1M0 30.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h1m2 0h1m4 0h1m1 0h1m1 0h2m1 0h2M0 31.5h1m5 0h1m1 0h2m2 0h6m1 0h1m1 0h2m3 0h1m1 0h3M0 32.5h7m3 0h1m1 0h1m2 0h1m2 0h1m3 0h3m2 0h1m3 0h1"/></svg>
+</div>
+        <p class="l1">Ablauf &amp; Challenges</p>
+        <p class="l2">daimpad.github.io/hack-the-stadtrat</p>
+      </div>
+    </section>
+    <p class="fine">Veranstalter: machdenstaat.de · Gefördert durch das Land Nordrhein-Westfalen im Programm „2.000 x 1.000 Euro für das Engagement“ · Die Straßenszene ist eine fiktive Darstellung Bonns.</p>
+  </div>
+</div>
+</body>
+</html>
