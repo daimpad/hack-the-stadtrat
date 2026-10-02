@@ -6,6 +6,18 @@
 <title>Hack den Stadtrat – Mitmach-Tag am 17. Oktober 2026 | bitcircus101 Bonn</title>
 <meta name="description" content="Mitmach-Tag zu offenen Ratsdaten und KI: Samstag, 17. Oktober 2026, ab 11 Uhr im bitcircus101, Bonn. Kostenlos, ohne Anmeldung, kein Programmierwissen nötig.">
 <meta name="theme-color" content="#05010f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2305010f'/%3E%3Cpath d='M14 27 18 7 29 19M50 27 46 7 35 19' fill='none' stroke='%23ff2a6d' stroke-width='4' stroke-linejoin='round'/%3E%3Cellipse cx='32' cy='37' rx='21' ry='18' fill='%231a0640' stroke='%2305d9e8' stroke-width='4'/%3E%3Cellipse cx='24.5' cy='35' rx='4' ry='3' fill='%23d7ff50'/%3E%3Cellipse cx='39.5' cy='35' rx='4' ry='3' fill='%23d7ff50'/%3E%3Cpath d='M28.5 42h7l-3.5 3.5z' fill='%23ff7ab8'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://daimpad.github.io/hack-the-stadtrat/002-neon-rain.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Hack den Stadtrat – Mitmach-Tag am 17. Oktober 2026">
+<meta property="og:description" content="Mitmach-Tag zu offenen Ratsdaten und KI: Samstag, 17. Oktober 2026, ab 11 Uhr im bitcircus101, Bonn. Kostenlos, ohne Anmeldung, kein Programmierwissen nötig.">
+<meta property="og:url" content="https://daimpad.github.io/hack-the-stadtrat/002-neon-rain.html">
+<meta property="og:image" content="https://daimpad.github.io/hack-the-stadtrat/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fiktive, neonbeleuchtete Straßenszene eines nächtlichen Bonn im Regen mit dem Titel Hack den Stadtrat">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="dark">
 <script type="application/ld+json">
 {
@@ -17,6 +29,8 @@
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "inLanguage": "de",
+  "url": "https://daimpad.github.io/hack-the-stadtrat/002-neon-rain.html",
+  "image": ["https://daimpad.github.io/hack-the-stadtrat/og-image.jpg"],
   "isAccessibleForFree": true,
   "location": {
     "@type": "Place",
@@ -120,6 +134,17 @@ a:hover{color:#7ff3fb;text-decoration-thickness:2px}
 .btn.alt:hover{background:rgba(255,42,109,.16);color:#fff;box-shadow:0 0 0 3px rgba(255,42,109,.22),0 0 24px rgba(255,42,109,.4)}
 .btn svg{width:1em;height:1em}
 @media (hover:none){.hint{display:none}}
+.btn.ghost{background:transparent;color:var(--text);border-color:rgba(236,232,246,.35);font-weight:600}
+.btn.ghost:hover{background:rgba(249,240,2,.1);border-color:var(--acid);color:#fff;box-shadow:0 0 0 3px rgba(249,240,2,.15)}
+.ics-inline{margin-top:.5rem;min-height:40px;font-size:.88rem}
+.hero-panel{position:relative}
+.peek{position:absolute;top:10px;right:10px;width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(5,217,232,.45);background:rgba(5,1,15,.6);color:var(--cyan);cursor:pointer;padding:0}
+.peek:hover{color:var(--acid);border-color:var(--acid)}
+.peek svg{width:18px;height:18px;transition:transform .2s ease}
+.hero.is-peek .peek svg{transform:rotate(180deg)}
+.hero.is-peek #hero-details{display:none}
+.hero.is-peek .hero-panel{--bg:rgba(5,1,15,.55)}
+.hero.is-peek .title{margin-bottom:0}
 .hint{margin:.9rem 0 0;font:500 .7rem/1.4 var(--f-mono);letter-spacing:.08em;color:#a99fc6;text-transform:uppercase}
 
 .ticker{grid-row:4;position:relative;overflow:hidden;border-top:1px solid rgba(255,42,109,.45);background:rgba(5,1,15,.82);font:500 .8rem/1 var(--f-mono);letter-spacing:.06em;color:var(--text);pointer-events:auto}
@@ -204,6 +229,14 @@ tbody tr{transition:background .2s ease}
 tbody tr:hover{background:rgba(5,217,232,.06)}
 @media print{.js .panel{opacity:1!important;transform:none!important}.bgfx,.fgfx{display:none}}
 
+@media (max-width:640px){
+  .hero-panel{padding:16px 14px 14px}
+  .title{font-size:clamp(2rem,10.5vw,2.7rem);padding-right:44px}
+  .sub{font-size:1rem;margin-bottom:.5rem}
+  .facts{font-size:.92rem;line-height:1.45;gap:.15rem;margin-bottom:.8rem}
+  .actions{gap:8px}
+  .btn{min-height:42px;padding:.5em .7em;font-size:.86rem;gap:.4em}
+}
 @media (max-width:560px){
   .hud{padding-top:8px;gap:6px}
   .hud-cell{padding:5px 8px}
@@ -247,6 +280,8 @@ tbody tr:hover{background:rgba(5,217,232,.06)}
   <div class="hero-main">
     <div class="hero-panel brk">
       <h1 class="title" data-text="Hack den Stadtrat">Hack den Stadtrat</h1>
+      <button type="button" class="peek" id="btn-peek" aria-controls="hero-details" aria-expanded="true" aria-label="Infos einklappen und Szene ansehen" title="Szene ansehen"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      <div id="hero-details">
       <p class="sub">Mitmach-Tag zu offenen Ratsdaten und KI</p>
       <ul class="facts">
         <li>Samstag, 17. Oktober 2026, ab 11 Uhr, Ende offen</li>
@@ -256,12 +291,14 @@ tbody tr:hover{background:rgba(5,217,232,.06)}
       <div class="actions">
         <a class="btn" href="#ablauf">Zum Ablauf <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></a>
         <a class="btn alt" href="mailto:goern@machdenstaat.de">Kurz Bescheid geben</a>
+        <button type="button" class="btn ghost js-ics"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3" width="12" height="11" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 6.5h12M5 1.5v3M11 1.5v3" stroke="currentColor" stroke-width="1.6"/></svg>In den Kalender</button>
       </div>
       <p class="hint" aria-hidden="true">Klick: Blitz · Katze anklicken · R: Regen · T: Ton</p>
+      </div>
     </div>
   </div>
 
-  <div class="ticker" tabindex="0" role="region" aria-label="Laufband mit Veranstaltungsangaben; Fokus oder Zeiger hält es an">
+  <section class="ticker" tabindex="0" aria-label="Laufband mit Veranstaltungsangaben; Fokus oder Zeiger hält es an">
     <span class="ticker-label" aria-hidden="true">INFO</span>
     <div class="ticker-track">
       <ul>
@@ -287,7 +324,7 @@ tbody tr:hover{background:rgba(5,217,232,.06)}
         <li>BONN WAR 1949–1990 HAUPTSTADT · JEDE WOCHE ENTSCHEIDET DER BONNER RAT ÜBER KITAS, RADWEGE UND BAUPROJEKTE</li>
       </ul>
     </div>
-  </div>
+  </section>
 </header>
 
 <main id="inhalt">
@@ -315,7 +352,7 @@ tbody tr:hover{background:rgba(5,217,232,.06)}
       <div>
         <h2 id="h-blick">Auf einen Blick</h2>
         <dl class="glance">
-          <div><dt>Wann</dt><dd>Samstag, 17. Oktober 2026, ab 11 Uhr, Ende offen</dd></div>
+          <div><dt>Wann</dt><dd>Samstag, 17. Oktober 2026, ab 11 Uhr, Ende offen<br><button type="button" class="btn ghost js-ics ics-inline">Termin als Kalenderdatei (.ics)</button></dd></div>
           <div><dt>Wo</dt><dd><a href="https://bitcircus101.de/">bitcircus101</a>, Dorotheenstraße 101, 53113 Bonn (<a href="https://www.openstreetmap.org/?mlat=50.74042&amp;mlon=7.08942#map=18/50.74042/7.08942">Karte</a> · <a href="https://bitcircus101.de/#contact">Kontakt</a>)</dd></div>
           <div><dt>Für wen</dt><dd>interessierte Bonner:innen, Lokaljournalist:innen, Blogger:innen und Initiativen</dd></div>
           <div><dt>Was du brauchst</dt><dd>Neugier. Wenn du hast, bring einen Laptop mit.</dd></div>
@@ -1115,15 +1152,21 @@ function drawCat(dt,dx,dy){
   poly([S3(0.16,0.4),S3(0.13,0.52),S3(0.1,0.62)],mag,lw*1.2);
   // Augen
   C.eyes=[];
+  // Blickrichtung: zum Zeiger, sonst ruhiges Umherschauen
+  var look;
+  if(S.t-S.lastInput<4&&S.ptr){var lvx=S.ptr[0]-C.sx,lvy=S.ptr[1]-C.sy,ld=Math.hypot(lvx,lvy)||1,lk=Math.min(1,ld/(R*3));look=[lvx/ld*lk,lvy/ld*lk];}
+  else look=reduced?[0,0]:[Math.sin(S.t*0.7)*0.3,Math.sin(S.t*0.45)*0.15];
   for(s=-1;s<=1;s+=2){
     var ex=s*0.36,ey=0.08,ez=surfZ(ex,ey),e0=P(ex,ey,ez),e1=P(ex+0.17,ey,ez-0.06*s),e2=P(ex-0.17,ey,ez+0.06*s),a=vis(e0);
     if(a<=0)continue;
     var hh=R*(angry?0.13:0.1);
     c.fillStyle=angry?rgba([255,25,45],a):rgba([215,255,80],a);c.beginPath();c.moveTo(e2[0],e2[1]);
     c.quadraticCurveTo(e0[0],e0[1]-hh*2,e1[0],e1[1]);c.quadraticCurveTo(e0[0],e0[1]+hh*2,e2[0],e2[1]);c.fill();
-    var hw=Math.abs(e1[0]-e2[0])/2;
-    c.fillStyle=rgba([8,2,14],a);c.beginPath();c.ellipse(e0[0],e0[1],Math.max(0.6,hw*(angry?0.1:0.2)),hh*0.95,0,0,TAU);c.fill();
-    c.fillStyle=rgba([255,255,255],0.85*a);c.beginPath();c.arc(e0[0]+hw*0.3,e0[1]-hh*0.4,Math.max(0.8,R*0.022),0,TAU);c.fill();
+    var hw=Math.abs(e1[0]-e2[0])/2,pxe=e0[0]+look[0]*hw*0.55,pye=e0[1]+look[1]*hh*0.5;
+    c.save();c.clip();
+    c.fillStyle=rgba([8,2,14],a);c.beginPath();c.ellipse(pxe,pye,Math.max(0.6,hw*(angry?0.1:0.2)),hh*0.95,0,0,TAU);c.fill();
+    c.restore();
+    c.fillStyle=rgba([255,255,255],0.85*a);c.beginPath();c.arc(pxe+hw*0.3,pye-hh*0.4,Math.max(0.8,R*0.022),0,TAU);c.fill();
     C.eyes.push([e0[0],e0[1],a]);
   }
   // Nase, Maul, Schnurrhaare
@@ -1596,6 +1639,28 @@ document.addEventListener('keydown',function(e){
 document.getElementById('btn-strike').addEventListener('click',function(){strike(S.W*rr(0.35,0.9),S.gy*rr(0.32,0.5),true);});
 document.getElementById('btn-rain').addEventListener('click',cycleRain);
 document.getElementById('btn-sound').addEventListener('click',function(){setSound(!AU.on);});
+/* Infos einklappen, um die Szene zu sehen */
+var peekBtn=document.getElementById('btn-peek');
+if(peekBtn)peekBtn.addEventListener('click',function(){var on=!hero.classList.contains('is-peek');hero.classList.toggle('is-peek',on);
+  peekBtn.setAttribute('aria-expanded',on?'false':'true');peekBtn.setAttribute('aria-label',on?'Infos wieder einblenden':'Infos einklappen und Szene ansehen');peekBtn.title=on?'Infos zeigen':'Szene ansehen';});
+/* Kalenderdatei (.ics) ohne Netzwerkzugriff erzeugen; Ende offen, daher ohne DTEND */
+var PAGE_URL='https://daimpad.github.io/hack-the-stadtrat/002-neon-rain.html';
+function icsFold(line){var out=[],cur='',n=0,enc=window.TextEncoder?new TextEncoder():null;
+  for(var ch of line){var b=enc?enc.encode(ch).length:1;if(n+b>73){out.push(cur);cur=' ';n=1;}cur+=ch;n+=b;}out.push(cur);return out.join('\r\n');}
+function icsDownload(){
+  var stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');
+  var L2=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//machdenstaat.de//Hack den Stadtrat//DE','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+    'UID:hack-den-stadtrat-20261017@machdenstaat.de','DTSTAMP:'+stamp,'DTSTART:20261017T090000Z',
+    'SUMMARY:Hack den Stadtrat: Mitmach-Tag zu offenen Ratsdaten und KI',
+    'LOCATION:bitcircus101\\, Dorotheenstraße 101\\, 53113 Bonn',
+    'DESCRIPTION:Samstag\\, 17. Oktober 2026\\, ab 11 Uhr\\, Ende offen. Kostenlos und ohne Anmeldung\\, kein Programmierwissen nötig.\\n'+PAGE_URL,
+    'URL:'+PAGE_URL,'END:VEVENT','END:VCALENDAR'];
+  var txt=L2.map(icsFold).join('\r\n')+'\r\n';
+  try{var blob=new Blob([txt],{type:'text/calendar;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='hack-den-stadtrat-2026-10-17.ics';
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1500);}
+  catch(e){window.location.href='data:text/calendar;charset=utf-8,'+encodeURIComponent(txt);}
+}
+Array.prototype.forEach.call(document.querySelectorAll('.js-ics'),function(b){b.addEventListener('click',icsDownload);});
 
 /* ---------- Sichtbarkeit, Bewegung, Größe ---------- */
 if('IntersectionObserver' in window){
